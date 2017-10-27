@@ -74,9 +74,7 @@ namespace ConsoleApplication1
         public static void parseFile(string[] arguments) //string filePath
         {
             try {
-                //string filePath = "\\\\rtp-web10-d-svr\\C\\BBYAppData\\BBYApps\\E3Retail\\PointOfService\\";
-                //string[] fileArray = Directory.GetFiles(@"\\\\rtp-web10-d-svr\\C\\BBYAppData\\BBYApps\\E3Retail\\PointOfService\\", "POSTrace*.txt");
-
+             
                 string pattern = arguments[1].Substring(0, arguments[1].IndexOf('.'));
                 Console.WriteLine("pattern =   " + pattern);
                 string[] fileArray = Directory.GetFiles(arguments[0], pattern + "*.txt");
