@@ -10,7 +10,7 @@ namespace ConsoleApplication1
     public class Program
     {
         static string newLine = System.Environment.NewLine;
-        static string e3userName = String.Empty;
+        static string userName = String.Empty;
         static string fileWritePath = String.Empty;
 
         public static void Main(string[] args)
@@ -78,9 +78,9 @@ namespace ConsoleApplication1
                 string pattern = arguments[1].Substring(0, arguments[1].IndexOf('.'));
                 Console.WriteLine("pattern =   " + pattern);
                 string[] fileArray = Directory.GetFiles(arguments[0], pattern + "*.txt");
-                e3userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').Last();
-                Console.WriteLine("user = " + e3userName);
-                fileWritePath = "C:\\Users\\" + e3userName + "\\Documents\\";
+                userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').Last();
+                Console.WriteLine("user = " + userName);
+                fileWritePath = "C:\\Users\\" + userName + "\\Documents\\";
                 Console.WriteLine("write file location = " + fileWritePath);
 
                 foreach (string file in fileArray)
